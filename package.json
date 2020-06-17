@@ -1,0 +1,23 @@
+{
+  "name": "fun-cool-github",
+  "version": "0.1.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laeyoung-comcom/fun-cool-github.git"
+  },
+  "keywords": [
+    "ainize"
+  ],
+  "author": "Laeyoung",
+  "license": "MIT",
+  "homepage": "https://github.com/laeyoung-comcom/fun-cool-github",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0",
+    "request": "^2.87.0"
+  }
+}
