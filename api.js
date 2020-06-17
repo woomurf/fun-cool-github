@@ -13,7 +13,16 @@ router.get('/search', async function (req, res) {
   const response = await fetch(url)
   const jsonResponse = await response.json()
 
-  res.status(200).json(jsonResponse)
+  res.status(200).json(
+    jsonResponse.items
+      .map(item => {
+        return {
+          name: item.full_name,
+          url: item.html_url,
+          stars: item.stargazers_count
+        }
+      })
+  )
 })
 
 module.exports = router
