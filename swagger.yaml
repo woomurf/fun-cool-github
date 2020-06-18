@@ -1,0 +1,30 @@
+openapi: 3.0.0   # Open api version
+
+info:   # Set basic infomation
+  title: swagger-example
+  version: 0.1.1
+
+servers:   # Set your server endpoint
+  - url: https://fun-cool-github-laeyoung.endpoint.ainize.ai
+
+paths:
+  /api/search:   # GET method path
+    get:
+      parameters:   # Set parameter values here
+        - name: keyword   # Set parameter name
+          in: query   # Select amongst query, header, path, and cookie
+          schema:
+            type: string
+          required: true
+          allowReserved: true   # Option for percent-encoding, default; false 
+      responses:   # Set response
+        '200':
+          description: Success
+          content:   # Descriptions of potential response payloads (optional)
+            application/json:
+              schema:   # Set data types
+                type: object
+        '400':
+          description: Bad Request Error
+        default: 
+          description: Unexpected Error
